@@ -1,0 +1,19 @@
+{
+  "name": "didactic-potato",
+  "version": "1.0.0",
+  "description": "A function that receives as a parameter an array of positive integers in any order, it complete the range if there are missing numbers in the array. Finally return the complete and ordered arrangement in ascending order.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjdevco/didactic-potato.git"
+  },
+  "author": "Jose Jimenez",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jjdevco/didactic-potato/issues"
+  },
+  "homepage": "https://github.com/jjdevco/didactic-potato#readme"
+}
