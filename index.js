@@ -1,5 +1,5 @@
-function myFunction(arr) {
-  return null;
+function myFunction(arr = []) {
+  return arr;
 }
 
 module.exports = myFunction;
