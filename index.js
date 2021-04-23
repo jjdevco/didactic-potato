@@ -9,7 +9,27 @@ function myFunction(arr) {
     );
   }
 
-  return arr;
+  this.sort = function (arr) {
+    let tempArr = arr;
+    let arrSize = tempArr.length;
+    let current = 1;
+
+    while (current < arrSize) {
+      for (number in tempArr) {
+        if (tempArr[current] < tempArr[number]) {
+          let temp = tempArr[number];
+          tempArr[number] = tempArr[current];
+          tempArr[current] = temp;
+        }
+
+        current = current + 1;
+      }
+    }
+
+    return tempArr;
+  };
+
+  return this.sort(arr);
 }
 
 module.exports = myFunction;
