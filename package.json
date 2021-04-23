@@ -4,7 +4,7 @@
   "description": "A function that receives as a parameter an array of positive integers in any order, it complete the range if there are missing numbers in the array. Finally return the complete and ordered arrangement in ascending order.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jjdevco/didactic-potato/issues"
   },
-  "homepage": "https://github.com/jjdevco/didactic-potato#readme"
+  "homepage": "https://github.com/jjdevco/didactic-potato#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
 }
