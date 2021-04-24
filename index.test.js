@@ -26,6 +26,30 @@ describe("myFunction", () => {
     const arr = [2, 1, 4, 5];
     const result = myFunction(arr);
 
-    expect(result).toEqual([1, 2, 4, 5]);
+    expect(result[0]).toEqual(1);
+    expect(result[result.length - 1]).toEqual(5);
+  });
+
+  test("The function should fill the missing numbers", () => {
+    const createFilledArr = (lenght) =>
+      Array(lenght)
+        .fill(null)
+        .map((_, idx) => idx + 1);
+
+    const caseOne = [2, 1, 4, 5];
+    const expectedResultOne = createFilledArr(5);
+    const resultOne = myFunction(caseOne);
+
+    const caseTwo = [4, 2, 9];
+    const expectedResultTwo = createFilledArr(9);
+    const resultTwo = myFunction(caseTwo);
+
+    const caseThree = [58, 60, 55];
+    const expectedResultThree = createFilledArr(60);
+    const resultThree = myFunction(caseThree);
+
+    expect(resultOne).toEqual(expectedResultOne);
+    expect(resultTwo).toEqual(expectedResultTwo);
+    expect(resultThree).toEqual(expectedResultThree);
   });
 });
