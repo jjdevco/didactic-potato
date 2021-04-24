@@ -10,17 +10,10 @@ function myFunction(arr) {
   }
 
   this.getHighestNumber = function (arr) {
-    let tempArr = arr;
-    let arrSize = tempArr.length;
-    let current = 1;
-
     let highestNumber = -Infinity;
 
-    while (current < arrSize) {
-      for (number in tempArr) {
-        if (tempArr[number] > highestNumber) highestNumber = tempArr[number];
-        current = current + 1;
-      }
+    for (number in arr) {
+      if (arr[number] > highestNumber) highestNumber = arr[number];
     }
 
     return highestNumber;
