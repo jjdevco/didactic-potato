@@ -9,27 +9,36 @@ function myFunction(arr) {
     );
   }
 
-  this.sort = function (arr) {
+  this.getHighestNumber = function (arr) {
     let tempArr = arr;
     let arrSize = tempArr.length;
     let current = 1;
 
+    let highestNumber = -Infinity;
+
     while (current < arrSize) {
       for (number in tempArr) {
-        if (tempArr[current] < tempArr[number]) {
-          let temp = tempArr[number];
-          tempArr[number] = tempArr[current];
-          tempArr[current] = temp;
-        }
-
+        if (tempArr[number] > highestNumber) highestNumber = tempArr[number];
         current = current + 1;
       }
+    }
+
+    return highestNumber;
+  };
+
+  this.fill = function (arr) {
+    const highestNumber = this.getHighestNumber(arr);
+
+    const tempArr = [];
+
+    for (let i = 1; i <= highestNumber; i++) {
+      tempArr.push(i);
     }
 
     return tempArr;
   };
 
-  return this.sort(arr);
+  return this.fill(arr);
 }
 
 module.exports = myFunction;
